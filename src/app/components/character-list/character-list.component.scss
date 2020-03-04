@@ -1,0 +1,23 @@
+.bottom-border {
+    border-bottom: 1px solid #fff;
+  }
+  
+  .card-component__section{
+      background-color: black;
+      .card-component__header {
+        background-color: black;
+        color: #fff;
+        opacity: 1;
+        padding: 15px;
+      }
+      .card-component__details{
+        background-color: darkgray;
+        color: #fff;
+        padding: 20px;
+
+          label{
+            color: orange;
+            float: right;
+          }
+      }
+  }

@@ -1,0 +1,31 @@
+<div class="card-component__section" *ngFor="let character of (characters$ | filter:{ property: ''}:filterChecked:false | sort:'id':operator)">
+    <img src={{character.image}} />
+    <div class="card-component__content">
+        <div class="card-component__header">
+            <span class="card-header">{{character.name}}</span>
+            <p>id:<span>{{character.id}}</span>- {{character.created | date:'dd/MM/yyyy'}}</p>
+        </div>
+        <div class="card-component__details">
+            <div class="bottom-border">
+                <span>STATUS</span>
+                <label>{{character.status}}</label>
+            </div>
+            <div  class="bottom-border">
+                <span>SPECIES</span>
+                <label>{{character.species}}</label>
+            </div>
+            <div  class="bottom-border">
+                <span>GENDER</span>
+                <label>{{character.gender}}</label>
+            </div>
+            <div  class="bottom-border">
+                <span>ORIGIN</span>
+                <label>{{character.origin.name}}</label>
+            </div>
+            <div  class="">
+                <span>LAST LOCATION</span>
+                <label>{{character.location.name}}</label>
+            </div>
+        </div>
+    </div>
+</div> 

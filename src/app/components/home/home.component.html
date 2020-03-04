@@ -1,0 +1,74 @@
+<h1>Rick and Morty</h1>
+
+
+<div class="row">
+    <div id="sidebar" class="col-4">
+        <h2>Filters</h2>
+        <div class="form form-inline">
+            <div *ngFor="let filterItem of filterItems; let i = index;" class="form-check" style="padding-right:20px;">
+             <div>{{filterItem.name}}</div> 
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" [(ngModel)]="filterItem.checked" [value]="filterItem.value"> {{filterItem.value}}
+              </label>
+            </div>
+          </div>
+       <!-- <div>
+            <h3>Species</h3>
+
+            <input type="checkbox" value="human" [(ngModel)]="checked" name="species" /> <span>Human</span> <br/>
+            <input type="checkbox" value="mythology" [(ngModel)]="checked" name="species" /> <span>Mythology</span> <br/>
+            <input type="checkbox" value="other species" [(ngModel)]="checked" name="species" /> <span>Other Species</span> <br/>
+
+        </div>
+        <div>
+            <h3>Gender</h3>
+
+            <input type="checkbox" value="male" [(ngModel)]="checked" name="gender" /> <span>Male</span> <br/>
+            <input type="checkbox" value="female" [(ngModel)]="checked" name="gender" /> <span>Female</span> <br/>
+
+        </div>
+        <div>
+            <h3>Origin</h3>
+
+            <input type="checkbox" value="unknown" [(ngModel)]="checked" name="origin" /> <span>Unknown</span> <br/>
+            <input type="checkbox" value="post-apocalyptic earth" [(ngModel)]="checked" name="origin" /> <span>Post-Apocalyptic Earth</span> <br/>
+            <input type="checkbox" value="nuptia 4" [(ngModel)]="checked" name="origin" /> <span>Nuptia 4</span> <br/>
+            <input type="checkbox" value="other origins" [(ngModel)]="checked" name="origin" /> <span>Other Origins</span>
+
+        </div> -->
+    </div>
+    <div id="content" class="col-8">
+        <h2>Selected filters</h2>
+
+        <pre><span *ngFor="let filterItem of checked()" style="padding-right:10px;">{{ filterItem.value }}</span></pre>
+        <div></div>
+        <div>
+            
+            <form [formGroup]="group">
+                <p>Search by Name</p>
+                <input name="searchText" formControlName="search"/>
+            </form>
+
+            
+
+            
+                <select name="operator" [(ngModel)]="operator">
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            
+        </div>
+
+        
+        <!-- Card Component -->
+        <div class="card-component">
+            <app-character-list [(operator)]="operator" [filterChecked]="filterChecked"></app-character-list>
+        </div> 
+
+       
+    </div>
+
+
+
+
+    </div> 
