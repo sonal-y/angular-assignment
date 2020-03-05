@@ -6,7 +6,7 @@
       background-color: black;
       width: 310px;
       margin: 5px;
-      padding: 10px;
+      padding: 5px 2px;
       position: relative;
       .card-component__content{
         position: relative;
@@ -27,7 +27,7 @@
         width: -webkit-fill-available;
       }
       .card-component__details{
-        background-color: darkgray;
+        background-color: #303030;
         color: #fff;
         padding: 20px;
 
