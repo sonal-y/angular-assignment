@@ -7,6 +7,11 @@
       width: 310px;
       margin: 5px;
       padding: 10px;
+      position: relative;
+      .card-component__content{
+        position: relative;
+        margin: 0 5px;
+      }
       img {
         text-align: center;
         display: block;
@@ -15,8 +20,11 @@
       .card-component__header {
         background-color: black;
         color: #fff;
-        opacity: 1;
-        padding: 15px;
+        opacity: 0.6;
+        padding: 10px 15px;
+        position: absolute;
+        top:-56px;
+        width: -webkit-fill-available;
       }
       .card-component__details{
         background-color: darkgray;
